@@ -1,8 +1,10 @@
+import os
 from flask import Flask
 from flask_cors import CORS
 
 from .db_models import db
 DB_NAME = "database.db"
+DB_PATH = os.path.join(os.getcwd(), "instance", DB_NAME)
 
 
 def create_app():
